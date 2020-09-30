@@ -63,8 +63,7 @@ public class UI {
 					
 					break;
 				case 7 :
-					//Operations.printQuestionsList(loggedIn.feed);
-					
+					Operations.printFeed(withFiles.readFeed());;
 					break;
 				case 8 :
 					System.out.println("thanks for your time ^_^");

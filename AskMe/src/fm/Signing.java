@@ -7,12 +7,10 @@ import java.util.Scanner;
 
 public class Signing {
 	static Scanner input = new Scanner(System.in);
-
 	
 	public static void main(String[] args) {
 		
 	}
-	
 	
 /*	public static User signIn(String userName, String passWord, boolean anonymous) {
 		User u = new User(userName, passWord, anonymous);
@@ -24,17 +22,12 @@ public class Signing {
 		return u;
 	}*/
 	
-
 	public static User signUp() {
 		
 		
 		File f = new File("users");
 		f.mkdir();
 		
-		File f2 = new File("users\\feed.txt");
- 		try {
-			f.createNewFile();
-		} catch (IOException e1) {}
 		
 		System.out.print("enter the Username: ");
 		String userName = input.next();
@@ -121,8 +114,5 @@ public class Signing {
 			
 		
 	}
-	
-
-
 	
 }

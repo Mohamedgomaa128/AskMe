@@ -101,8 +101,45 @@ public class Operations {
 	
 	static Scanner input = new Scanner(System.in);
 	
-	private static void printFeed(ArrayList<Object> qList) {
+	public static void printFeed(ArrayList<Object> qList) {
+		for (int i = 0; i < qList.size(); i++) {
+			//System.out.print((i + 1) + " - ");
+			if (qList.get(i) instanceof Question)
+				printFQ((Question) qList.get(i));
+			else if (qList.get(i) instanceof Thread)
+				printFT((Thread) qList.get(i));
+		}
+	}
+	
+	private static void printFQ(Question q) {
 		
+		System.out.printf("Question Id (%d) from user id(%d) to user id(%d)    ", q.iD, q.asker.iD, q.askedTo.iD);
+		
+		System.out.printf("Question : %s\n", q.question);
+		if (q.answer != null)
+			System.out.printf("\t\t        Answer : %s\n", q.answer);
+	}
+
+	private static void printFT(Thread t) {
+		
+
+		System.out.printf("Question Id (%d) from user id(%d) to user id(%d)      ", t.parentQuestion.iD, t.parentQuestion.asker.iD,  t.parentQuestion.askedTo.iD);
+			
+		System.out.printf("Question : %s\n", t.parentQuestion.question);
+		if (t.parentQuestion.answer != null)
+			System.out.printf("\t\t        Answer : %s\n", t.parentQuestion.answer);
+		
+		
+		
+		if (t.questions != null) {
+			for (int  i = 0; i < t.questions.size(); i++) {
+				System.out.printf("\tthread :  Question Id (%d) from user(%d)      ", t.questions.get(i).iD, t.questions.get(i).asker.iD,  t.questions.get(i).askedTo.iD);
+				System.out.printf("Question : %s\n", t.questions.get(i).question);
+				if (t.questions.get(i).answer != null)
+					System.out.printf("\t\t\t        Answer : %s\n", t.questions.get(i).answer);
+			}	
+			
+		}
 	}
 	
 	private static void printQuestion(Question q) {
@@ -316,6 +353,7 @@ public class Operations {
 			System.out.println("enter your answer");
 			String ans = input.next();
 			toBeAnswered.answer = ans;
+			withFiles.addFeed(toBeAnswered);
 		}
 		else {
 			printThread((Thread) o);
@@ -342,6 +380,8 @@ public class Operations {
 				qList.add(toBeAnswered);
 				//((Thread) o).questions = qList;		
 			}
+			withFiles.addFeed(o);
+
 		}
 		withFiles.writeUser(u);
 		withFiles.writeUser(toBeAnswered.asker);
@@ -374,14 +414,15 @@ public class Operations {
 	public static void deleteQuestion(User u) {
 		
 		ArrayList<Object> list = u.fromOthers;
-		
+		ArrayList<Object> feed = withFiles.readFeed();
+
 		printAll(list);
 		
 		System.out.println("enter number from 1 to " + list.size());
 		int qChoice = input.nextInt() - 1;
 		Object o = list.get(qChoice);
-		
-	
+		int in = feed.indexOf(o);
+		feed.remove(o);
 		
 		
 		if (o instanceof Question) 
@@ -395,8 +436,10 @@ public class Operations {
 			
 			if (tChoice == -2) 
 				list.remove(qChoice);			
-			else
+			else {
 				((Thread) o).questions.remove(tChoice);
+				feed.add(in, o);
+			}
 			
 		}
 		

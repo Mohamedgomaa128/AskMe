@@ -284,7 +284,11 @@ public class withFiles {
  	}
  	
  	public static void addFeed(Object o) {
- 		
+ 		File f2 = new File("users\\feed.txt");
+ 		try {
+			f2.createNewFile();
+		} catch (IOException e1) {}
+		
  		try {
  			ArrayList<Object> list = readFeed();
  			if (list == null)
