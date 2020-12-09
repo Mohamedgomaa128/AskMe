@@ -17,3 +17,4 @@
   <li>run the UI class and start the program</li>
 </ol>
 
+<p>if you want to remove all past testing data then you should delete users folder before doing such</p>
