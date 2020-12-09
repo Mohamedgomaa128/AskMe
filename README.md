@@ -1,5 +1,9 @@
 # AskMe
 
+## Short Description
+AskMe is a questions and answers program like ask.fm
+
+
 ## Topfeatures
 <ol>
   <li>new feeds</li>
