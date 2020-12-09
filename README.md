@@ -21,4 +21,5 @@ AskMe is a questions and answers program like ask.fm
   <li>run the UI class and start the program</li>
 </ol>
 
+## Note
 <p>if you want to remove all past testing data then you should delete users folder before doing such</p>
