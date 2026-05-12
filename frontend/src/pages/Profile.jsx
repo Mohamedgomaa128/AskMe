@@ -149,10 +149,19 @@ const Profile = () => {
           <button 
             key={tab.id}
             className={activeTab === tab.id ? 'btn-primary' : 'glass'} 
-            style={{ padding: '12px 24px', borderRadius: '16px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px', transition: '0.3s' }}
+            style={{ 
+              padding: '12px 24px', 
+              borderRadius: '16px', 
+              cursor: 'pointer', 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '10px', 
+              transition: '0.3s',
+              color: 'white' // Explicitly set white color
+            }}
             onClick={() => setActiveTab(tab.id)}
           >
-            {tab.icon} {tab.label}
+            {React.cloneElement(tab.icon, { color: 'white' })} {tab.label}
           </button>
         ))}
       </div>

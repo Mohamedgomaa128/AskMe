@@ -21,9 +21,9 @@ function App() {
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         zIndex: 1000, borderRadius: '20px'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div className="btn-primary" style={{ padding: '8px', borderRadius: '10px' }}><Layout size={20} /></div>
-          <h1 style={{ fontSize: '20px', fontWeight: '800' }}>AskMe</h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <img src="/logo.png" alt="AskMe Logo" style={{ width: '40px', height: '40px', borderRadius: '12px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)' }} />
+          <h1 style={{ fontSize: '24px', fontWeight: '900', background: 'linear-gradient(135deg, #fff, var(--text-dim))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>AskMe</h1>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>

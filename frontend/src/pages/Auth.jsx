@@ -41,10 +41,11 @@ const Auth = () => {
         style={{ width: '100%', maxWidth: '450px', padding: '40px' }}
       >
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-          <h1 style={{ fontSize: '32px', fontWeight: '800', marginBottom: '8px', background: 'linear-gradient(to right, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <img src="/logo.png" alt="AskMe Logo" style={{ width: '80px', height: '80px', borderRadius: '20px', marginBottom: '20px', boxShadow: '0 10px 30px rgba(99, 102, 241, 0.2)' }} className="floating" />
+          <h1 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '8px', background: 'linear-gradient(to right, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             AskMe
           </h1>
-          <p style={{ color: 'var(--text-dim)' }}>{isLogin ? 'Welcome back, curious soul.' : 'Join the conversation.'}</p>
+          <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>{isLogin ? 'Welcome back, curious soul.' : 'Join the conversation.'}</p>
         </div>
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
