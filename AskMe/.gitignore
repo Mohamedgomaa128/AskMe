@@ -1,0 +1,46 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/resources/architecture.html
+!**/src/main/resources/EmptyCollectionSerializer.java
+!**/src/main/resources/InterfaceSerializer.java
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/resources/architecture.html
+
+### VS Code ###
+.vscode/
+
+### Frontend ###
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+### Database ###
+data/*.db
+data/*.lock.db
+data/*.trace.db
