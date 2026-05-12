@@ -52,11 +52,25 @@ AskMe/
 ---
 
 ## 📸 Preview
-> [!TIP]
-> **Check out the stunning UI!**
-> - **Auth**: Elegant login/signup switcher.
-> - **Feed**: Blurred cards with entrance animations.
-> - **Profile**: Interactive tabs to manage your questions.
+
+### 🔐 Authentication
+| Login | Register |
+|-------|----------|
+| ![Login](./images/log%20in.png) | ![Register](./images/Regester.png) |
+
+### 🌐 Global Feed
+![Global Feed](./images/Global%20Feed.png)
+
+### 👤 User Experience
+| Received Questions | Sent Questions |
+|--------------------|----------------|
+| ![Received](./images/Recieved%20Questions.png) | ![Sent](./images/sent%20Questions.png) |
+
+### 💬 Interaction
+| Ask Someone | Answer Questions |
+|-------------|------------------|
+| ![Ask Someone 1](./images/Ask%20Someone%201.png) | ![Answer Question](./images/Answer%20Some%20Question.png) |
+| ![Ask Someone 2](./images/Ask%20Someone%202.png) | |
 
 ---
 
